@@ -1,0 +1,17 @@
+<nav>
+  <div class="wrap">
+    <a href="{{ '/' | relative_url }}" class="site-name">signal-within-noise</a>
+    <div class="nav-links">
+      <a href="{{ '/' | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">about</a>
+      <a href="{{ '/projects/svd-mortality/' | relative_url }}" class="{% if page.url contains '/projects/' %}active{% endif %}">projects</a>
+      <a href="{{ '/writing/' | relative_url }}" class="{% if page.url contains '/writing' or page.layout == 'post' %}active{% endif %}">writing</a>
+    </div>
+  </div>
+</nav>
+
+<svg class="waveform" viewBox="0 0 800 60" preserveAspectRatio="none">
+  <path d="M0,30 L15,10 L25,45 L35,15 L45,40 L55,8 L65,42 L75,20 L85,38 L95,25
+           L115,32 L135,22 L155,34 L175,24 L195,30 L215,26 L235,31 L255,27
+           L280,30 Q310,10 340,30 T400,30 T460,30 T520,30 T580,30 T640,30 T700,30 T800,30"
+        fill="none" stroke="#2F6F63" stroke-width="1.5"/>
+</svg>

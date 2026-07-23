@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<div class="wrap">
+  <section style="border-top:none;">
+    <div class="section-label">projects</div>
+    {% for proj in site.data.projects %}
+    <a class="panel" href="{{ proj.url | relative_url }}">
+      <div class="panel-body">
+        <div class="tag">{{ proj.tag }}</div>
+        <h3>{{ proj.title }}</h3>
+        <p>{{ proj.summary }}</p>
+      </div>
+      {% if proj.thumbnail %}<img class="panel-chart" src="{{ proj.thumbnail | relative_url }}" alt="">{% else %}<div class="panel-chart"></div>{% endif %}
+    </a>
+    {% endfor %}
+  </section>
+</div>

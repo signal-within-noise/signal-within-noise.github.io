@@ -1,0 +1,12 @@
+- title: "Forecasting mortality with SVD factor decomposition"
+  url: "/projects/svd-mortality/"
+  tag: "time series · svd"
+  summary: "Lee-Carter-style mortality forecasting via SVD and ARIMA, applied to CDC mortality data."
+  thumbnail: "/assets/images/agg_mort.png"
+
+# Add future projects here in the same format, e.g.:
+# - title: "Project name"
+#   url: "/projects/project-slug/"
+#   tag: "category · method"
+#   summary: "One sentence, method first, dataset second."
+#   thumbnail: "/assets/images/some_chart.png"

@@ -1,0 +1,8 @@
+---
+layout: default
+---
+<div class="wrap page-content">
+  <div class="section-label">{{ page.eyebrow | default: page.title }}</div>
+  {% if page.title %}<h2>{{ page.title }}</h2>{% endif %}
+  {{ content }}
+</div>
