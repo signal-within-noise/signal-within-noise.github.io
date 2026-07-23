@@ -16,7 +16,8 @@ layout: default
 <section id="writing">
   <div class="wrap">
     <div class="section-label">writing</div>
-    {% for post in site.posts %}
+    {% assign writing_posts = site.posts | uniq: "url" %}
+    {% for post in writing_posts %}
     <a class="panel" href="{{ post.url | relative_url }}">
       {% if post.thumbnail %}<img class="panel-chart" src="{{ post.thumbnail | relative_url }}" alt="">{% else %}<div class="panel-chart"></div>{% endif %}
       <div class="panel-body">
