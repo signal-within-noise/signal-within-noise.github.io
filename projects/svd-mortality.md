@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Forecasting mortality with SVD factor decomposition"
-eyebrow: "time series · svd"
+eyebrow: "svd · time series"
 permalink: /projects/svd-mortality/
 ---
 
