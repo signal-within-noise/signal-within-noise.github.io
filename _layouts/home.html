@@ -14,14 +14,14 @@ layout: default
 </header>
 
 <section id="writing">
-  <div class="wrap">
+  <div class="wrap section-divider">
     <div class="section-label">writing</div>
     {% assign writing_posts = site.posts | uniq: "url" %}
     {% for post in writing_posts %}
     <a class="panel" href="{{ post.url | relative_url }}">
       {% if post.thumbnail %}<img class="panel-chart" src="{{ post.thumbnail | relative_url }}" alt="">{% else %}<div class="panel-chart"></div>{% endif %}
       <div class="panel-body">
-        <div class="tag">{{ post.date | date: "%b %Y" }}</div>
+        <div class="tag">{% if post.tag %}{{ post.tag }}{% else %}{{ post.date | date: "%b %Y" }}{% endif %}</div>
         <h3>{{ post.title }}</h3>
         {% if post.excerpt %}<p>{{ post.excerpt | strip_html | truncate: 140 }}</p>{% endif %}
       </div>
@@ -32,7 +32,7 @@ layout: default
 </section>
 
 <section id="projects">
-  <div class="wrap">
+  <div class="wrap section-divider">
     <div class="section-label">projects</div>
     {% for proj in site.data.projects %}
     <a class="panel" href="{{ proj.url | relative_url }}">

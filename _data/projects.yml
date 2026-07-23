@@ -4,7 +4,7 @@
   summary: "Lee-Carter-style mortality forecasting via SVD and ARIMA, applied to CDC mortality data."
   long_summary: "A Lee-Carter-style mortality forecast built with SVD factor decomposition and an ARIMA-modeled time index, applied to CDC WONDER mortality data. Decomposes an age-by-year log-mortality surface into latent factors, forecasts the dominant time-varying factor, and reconstructs a one-step-ahead mortality forecast."
   github: "https://github.com/signal-within-noise/svd-opioid-mortality"
-  thumbnail: "/assets/images/svd-opioid-mortality/state_mortality_heatmap_2010_2018.png"
+  thumbnail: "/assets/images/agg_mort.png"
 
 - title: "Work in progress"
   url: "/projects/work-in-progress/"

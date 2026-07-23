@@ -30,10 +30,9 @@ a { color: var(--accent); }
 a:focus-visible, button:focus-visible { outline: 1.5px solid var(--accent); outline-offset: 3px; }
 
 nav {
-  border-bottom: 1px solid var(--line);
-  padding: 26px 0;
+  padding-top: 26px;
 }
-nav .wrap { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+nav .wrap { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; padding-bottom: 26px; border-bottom: 1px solid var(--line); }
 .site-name {
   font-family: 'Lora', serif;
   font-size: 16px;
@@ -72,7 +71,18 @@ nav .wrap { display: flex; justify-content: space-between; align-items: center; 
   color: var(--warm);
 }
 
-.waveform { display: block; width: 100%; height: 44px; margin: 0; opacity: 0.85; }
+.waveform { display: block; width: 100%; height: 40px; margin: 18px 0; opacity: 0.85; }
+.waveform-path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: draw-waveform 1.6s ease-out forwards;
+}
+@keyframes draw-waveform {
+  to { stroke-dashoffset: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .waveform-path { animation: none; stroke-dashoffset: 0; }
+}
 
 header.hero { padding: 72px 0 48px; }
 .eyebrow {
@@ -112,7 +122,9 @@ h2 {
   margin-top: 8px;
 }
 
-section, .page-content { padding: 36px 0; border-top: 1px solid var(--line); }
+section { padding-bottom: 36px; }
+.section-divider { padding-top: 36px; border-top: 1px solid var(--line); }
+.page-content { padding: 36px 0; border-top: 1px solid var(--line); }
 .section-label {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 11.5px;
@@ -151,8 +163,8 @@ section, .page-content { padding: 36px 0; border-top: 1px solid var(--line); }
 .panel h3 { font-family: 'Lora', serif; font-weight: 500; font-size: 16px; margin: 0 0 4px; }
 .panel p { font-size: 13px; color: var(--muted); margin: 0; }
 .panel-chart {
-  width: 56px;
-  height: 40px;
+  width: 88px;
+  height: 64px;
   border-radius: 6px;
   background: var(--line-soft);
   border: none;
@@ -225,7 +237,8 @@ section[id], header[id] { scroll-margin-top: 90px; }
 }
 .back-link:hover { color: var(--ink); }
 
-footer { padding: 40px 0 60px; border-top: 1px solid var(--line); margin-top: 20px; }
+footer { padding: 20px 0 60px; margin-top: 20px; }
+footer .wrap { padding-top: 20px; border-top: 1px solid var(--line); }
 footer p { font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; color: var(--muted); letter-spacing: 0.02em; }
 
 @media (prefers-reduced-motion: reduce) {

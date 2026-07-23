@@ -9,7 +9,7 @@ layout: default
       {% assign writing_posts = site.posts | uniq: "url" %}
       {% for post in writing_posts %}
       <div class="entry">
-        <div class="entry-tag">{{ post.date | date: "%b %Y" }}</div>
+        <div class="entry-tag">{% if post.tag %}{{ post.tag }}{% else %}{{ post.date | date: "%b %Y" }}{% endif %}</div>
         <a class="entry-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
         <div class="entry-summary">{{ post.long_summary | default: post.excerpt | strip_html }}</div>
       </div>

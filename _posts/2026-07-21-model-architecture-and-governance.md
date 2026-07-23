@@ -1,15 +1,11 @@
 ---
 layout: post
-title: "Model architecture and governance"
+title: "Architecture as the Foundation of Model Governance"
 date: 2026-07-21
+tag: "architecture · governance"
 thumbnail: "/assets/images/model-arch/thumbnail.png"
 ---
 
-<!--
-Placeholder for the article/talk on model architecture and governance.
-Paste the content in here, replacing this note. This file will
-automatically appear on the /writing/ page and get its own URL --
-no extra linking needed.
--->
+*Overview of my industry presentation on the principles, practice, and importance of model architecture in building resilient and scalable systems.*
 
-Summary of the piece goes here.
+
