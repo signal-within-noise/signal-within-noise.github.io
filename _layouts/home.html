@@ -1,18 +1,48 @@
 ---
 layout: default
 ---
-<header class="hero">
+<header class="hero" id="about">
   <div class="wrap">
     {% if page.eyebrow %}<div class="eyebrow">{{ page.eyebrow }}</div>{% endif %}
     <h1>{{ page.headline }}</h1>
-    <div class="page-content" style="padding:0;border-top:none;">
+    <hr class="hero-rule">
+    <div class="bio">
       {{ content }}
     </div>
     {% if page.credentials %}<div class="credentials">{{ page.credentials }}</div>{% endif %}
-    <div class="links">
-      {% for link in page.links %}
-        <a href="{{ link.url }}">{{ link.label }} ↗</a>
-      {% endfor %}
-    </div>
   </div>
 </header>
+
+<section id="writing">
+  <div class="wrap">
+    <div class="section-label">writing</div>
+    {% for post in site.posts %}
+    <a class="panel" href="{{ post.url | relative_url }}">
+      {% if post.thumbnail %}<img class="panel-chart" src="{{ post.thumbnail | relative_url }}" alt="">{% else %}<div class="panel-chart"></div>{% endif %}
+      <div class="panel-body">
+        <div class="tag">{{ post.date | date: "%b %Y" }}</div>
+        <h3>{{ post.title }}</h3>
+        {% if post.excerpt %}<p>{{ post.excerpt | strip_html | truncate: 140 }}</p>{% endif %}
+      </div>
+      <div class="panel-arrow">&rarr;</div>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="section-label">projects</div>
+    {% for proj in site.data.projects %}
+    <a class="panel" href="{{ proj.url | relative_url }}">
+      {% if proj.thumbnail %}<img class="panel-chart" src="{{ proj.thumbnail | relative_url }}" alt="">{% else %}<div class="panel-chart"></div>{% endif %}
+      <div class="panel-body">
+        <div class="tag">{{ proj.tag }}</div>
+        <h3>{{ proj.title }}</h3>
+        <p>{{ proj.summary }}</p>
+      </div>
+      <div class="panel-arrow">&rarr;</div>
+    </a>
+    {% endfor %}
+  </div>
+</section>

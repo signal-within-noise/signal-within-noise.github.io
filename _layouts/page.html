@@ -2,6 +2,7 @@
 layout: default
 ---
 <div class="wrap page-content">
+  {% if page.url contains '/projects/' %}<a class="back-link" href="{{ '/#projects' | relative_url }}">&larr; back to projects</a>{% endif %}
   <div class="section-label">{{ page.eyebrow | default: page.title }}</div>
   {% if page.title %}<h2>{{ page.title }}</h2>{% endif %}
   {{ content }}

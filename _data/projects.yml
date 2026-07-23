@@ -1,12 +1,24 @@
 - title: "Forecasting mortality with SVD factor decomposition"
   url: "/projects/svd-mortality/"
-  tag: "time series · svd"
+  tag: "svd · time series"
   summary: "Lee-Carter-style mortality forecasting via SVD and ARIMA, applied to CDC mortality data."
+  long_summary: "A Lee-Carter-style mortality forecast built with SVD factor decomposition and an ARIMA-modeled time index, applied to CDC WONDER mortality data. Decomposes an age-by-year log-mortality surface into latent factors, forecasts the dominant time-varying factor, and reconstructs a one-step-ahead mortality forecast."
+  github: "https://github.com/signal-within-noise/svd-opioid-mortality"
   thumbnail: "/assets/images/agg_mort.png"
 
-# Add future projects here in the same format, e.g.:
+- title: "Work in progress"
+  url: "/projects/work-in-progress/"
+  tag: "nlp"
+  summary: "Placeholder for an upcoming NLP project — details to come."
+  long_summary: "Placeholder for an upcoming NLP project — details, method, and results to come as the work develops."
+
+# Add future projects here in the same format. Both summary fields, thumbnail,
+# and github are optional -- long_summary falls back to summary if omitted,
+# and the GitHub link/thumbnail simply won't render if left out.
 # - title: "Project name"
 #   url: "/projects/project-slug/"
 #   tag: "category · method"
-#   summary: "One sentence, method first, dataset second."
+#   summary: "Short one-liner shown on the homepage panel."
+#   long_summary: "Longer paragraph shown on the /projects/ archive page."
+#   github: "https://github.com/signal-within-noise/project-slug"
 #   thumbnail: "/assets/images/some_chart.png"

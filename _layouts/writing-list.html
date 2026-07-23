@@ -2,17 +2,17 @@
 layout: default
 ---
 <div class="wrap">
-  <section style="border-top:none;">
+  <div class="page-content" style="border-top:none;">
     <div class="section-label">writing</div>
-    {% if content and content != "" %}<div class="page-content" style="padding-top:0;border-top:none;">{{ content }}</div>{% endif %}
-    {% for post in site.posts %}
-    <a class="panel" href="{{ post.url | relative_url }}">
-      <div class="panel-body">
-        <div class="tag">{{ post.date | date: "%b %Y" }}</div>
-        <h3>{{ post.title }}</h3>
-        {% if post.excerpt %}<p>{{ post.excerpt | strip_html | truncate: 140 }}</p>{% endif %}
+    {% if content and content != "" %}<div style="margin-bottom:24px;">{{ content }}</div>{% endif %}
+    <div class="entry-list">
+      {% for post in site.posts %}
+      <div class="entry">
+        <div class="entry-tag">{{ post.date | date: "%b %Y" }}</div>
+        <a class="entry-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <div class="entry-summary">{{ post.long_summary | default: post.excerpt | strip_html }}</div>
       </div>
-    </a>
-    {% endfor %}
-  </section>
+      {% endfor %}
+    </div>
+  </div>
 </div>
