@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<div class="wrap">
+  <div class="page-content" style="border-top:none;">
+    <div class="section-label">projects</div>
+    <div class="entry-list">
+      {% for proj in site.data.projects %}
+      <div class="entry">
+        <div class="entry-tag">{{ proj.tag }}</div>
+        <a class="entry-title" href="{{ proj.url | relative_url }}">{{ proj.title }}</a>
+        <div class="entry-summary">{{ proj.long_summary | default: proj.summary }}</div>
+        {% if proj.github %}<a class="entry-link" href="{{ proj.github }}">View on GitHub &rarr;</a>{% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

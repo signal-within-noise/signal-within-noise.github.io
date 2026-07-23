@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<div class="wrap">
+  <div class="page-content" style="border-top:none;">
+    <div class="section-label">writing</div>
+    {% if content and content != "" %}<div style="margin-bottom:24px;">{{ content }}</div>{% endif %}
+    <div class="entry-list">
+      {% for post in site.posts %}
+      <div class="entry">
+        <div class="entry-tag">{{ post.date | date: "%b %Y" }}</div>
+        <a class="entry-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <div class="entry-summary">{{ post.long_summary | default: post.excerpt | strip_html }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

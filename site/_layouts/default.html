@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
+<link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
+<meta name="description" content="{{ page.description | default: site.description }}">
+<meta property="og:title" content="{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}">
+<meta property="og:description" content="{{ page.description | default: site.description }}">
+<meta property="og:image" content="{{ '/assets/images/og-image.png' | absolute_url }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+
+{% include nav.html %}
+
+{{ content }}
+
+<footer>
+  <div class="wrap">
+    <p>signal-within-noise.github.io</p>
+  </div>
+</footer>
+
+</body>
+</html>

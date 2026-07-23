@@ -1,0 +1,27 @@
+<nav>
+  <div class="wrap">
+    <a href="{{ '/' | relative_url }}" class="site-name">signal-within-noise</a>
+    <div class="nav-links">
+      <a href="{{ '/#about' | relative_url }}">about</a>
+      <a href="{{ '/#writing' | relative_url }}">writing</a>
+      <a href="{{ '/#projects' | relative_url }}">projects</a>
+      <span class="nav-divider"></span>
+      <a class="nav-action" href="{{ site.github }}">github</a>
+      <a class="nav-action" href="{{ site.linkedin }}">linkedin</a>
+    </div>
+  </div>
+</nav>
+
+<svg class="waveform" viewBox="0 0 800 60" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="wave-fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#B4AE9E"/>
+      <stop offset="45%" stop-color="#5B5F5A"/>
+      <stop offset="100%" stop-color="#2F6F63"/>
+    </linearGradient>
+  </defs>
+  <path d="M0,30 L15,10 L25,45 L35,15 L45,40 L55,8 L65,42 L75,20 L85,38 L95,25
+           L115,32 L135,22 L155,34 L175,24 L195,30 L215,26 L235,31 L255,27
+           L280,30 Q310,10 340,30 T400,30 T460,30 T520,30 T580,30 T640,30 T700,30 T800,30"
+        fill="none" stroke="url(#wave-fade)" stroke-width="1.5"/>
+</svg>
