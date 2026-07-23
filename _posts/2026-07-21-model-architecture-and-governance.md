@@ -2,6 +2,7 @@
 layout: post
 title: "Model architecture and governance"
 date: 2026-07-21
+thumbnail: "/assets/images/model-arch/thumbnail.png"
 ---
 
 <!--
